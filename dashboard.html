@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirate Stocks - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="dashboard.js" defer></script>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Pirate Stocks Logo"></a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-nav-toggle" aria-label="Toggle mobile menu">&#9776;</button>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#profile" class="active">Profile</a></li>
+                <li><a href="#account-summary">Account Summary</a></li>
+                <li><a href="#investment-portfolio">Investment Portfolio</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <!-- Additional sidebar links can be added here -->
+            </ul>
+        </aside>
+
+        <main class="dashboard-content">
+            <section id="profile" class="user-info">
+                <h2>Your Profile</h2>
+                <div class="profile-details">
+                    <p>Name: <span id="user-name">[User's Name]</span></p>
+                    <p>Member since: <span id="membership-date">[Date]</span></p>
+                    <!-- Additional user information can be added here -->
+                </div>
+            </section>
+
+            <section id="account-summary" class="account-summary">
+                <h2>Account Summary</h2>
+                <div class="summary-details">
+                    <p>Total Assets: <span id="total-assets">$[Amount]</span></p>
+                    <p>Active Investments: <span id="active-investments">[Number]</span></p>
+                    <!-- Account summary details -->
+                </div>
+            </section>
+
+            <section id="investment-portfolio" class="investment-portfolio">
+                <h2>Your Investment Portfolio</h2>
+                <div class="portfolio-details">
+                    <!-- Investment portfolio details -->
+                </div>
+            </section>
+
+            <section id="settings" class="settings">
+                <h2>Settings</h2>
+                <div class="settings-details">
+                    <button id="change-password-btn">Change Password</button>
+                    <button id="privacy-settings-btn">Privacy Settings</button>
+                    <!-- Additional settings -->
+                </div>
+            </section>
+
+            <section id="notifications" class="notifications">
+                <h2>Notifications</h2>
+                <div class="notifications-details">
+                    <p>You have <span id="notification-count">[Number]</span> new notifications.</p>
+                    <!-- Notifications details -->
+                </div>
+            </section>
+
+            <!-- Additional dashboard sections can be added here -->
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Pirate Stocks. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        mobileNavToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('open');
+        });
+
+        // Logout functionality
+        document.getElementById('logout').addEventListener('click', function() {
+            // Implement logout logic here
+            window.location.href = 'index.html';
+        });
+
+        // Change Password and Privacy Settings functionality
+        document.getElementById('change-password-btn').addEventListener('click', function() {
+            // Implement change password logic here
+            alert('Change password feature coming soon!');
+        });
+
+        document.getElementById('privacy-settings-btn').addEventListener('click', function() {
+            // Implement privacy settings logic here
+            alert('Privacy settings feature coming soon!');
+        });
+    </script>
+</body>
+</html>
